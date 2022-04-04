@@ -1,3 +1,13 @@
+<?php
+session_start();
+?>
+<?php
+$_SESSION["loginstatus"];
+if ($_SESSION["loginstatus"] != true){
+    $_SESSION["loginstatus"] = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +33,13 @@
 <main>
     <section>
         <h1>Module Checker</h1>
-
+<?php
+if ($_SESSION['loginstatus'] == true){
+    echo "You are now logged in";
+} else {
+    echo "please log in to continue";
+}
+?>
     </section>
 </main>
     

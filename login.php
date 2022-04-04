@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("functions/db_login.php");
 ?>
 

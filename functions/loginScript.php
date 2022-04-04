@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db_login.php");
 $connection = mysqli_connect($db_host, $db_username, $db_password, $db_database);
 
@@ -38,15 +39,15 @@ function compareCredentials($connection, $firstName, $lastName, $studentNumber, 
 
     if ($credentials['studentID'] === $studentNumber && $credentials['firstName'] === $firstName && $credentials['lastName'] === $lastName && $credentials['pwd'] === $pwd) {
         echo "HOORAH!";
+        return true;
     } else {
         echo "ah damn";
+        return false;
     }
 }
 
-checkRegistration($firstName, $lastName, $studentNumber, $pwd);
-
-compareCredentials($connection, $firstName, $lastName, $studentNumber, $pwd);
-
-
-
+if (checkRegistration($firstName, $lastName, $studentNumber, $pwd) && compareCredentials($connection, $firstName, $lastName, $studentNumber, $pwd) !== false) {
+    $_SESSION["loginstatus"] = true;
+    header("location: ../index.php");
+}
 mysqli_close($connection);
