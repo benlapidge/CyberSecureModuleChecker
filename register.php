@@ -2,7 +2,6 @@
 session_start();
 include("functions/db_login.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,9 @@ include("functions/db_login.php");
     <link href="/css/style.css" rel="stylesheet">
     
 </head>
+<?php 
+include("header.php");
+?>
 <body>
     <h2>Login</h2>
     <script src="js/validateForm.js"></script>

@@ -13,6 +13,9 @@ include("functions/db_login.php");
     <link href="/css/style.css" rel="stylesheet">
     
 </head>
+<?php 
+include("header.php");
+?>
 <body>
     <h2>Login</h2>
     <form name="loginForm" action="functions/loginScript.php" onsubmit="return validateLoginForm()" method="POST">
