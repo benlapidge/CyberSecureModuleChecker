@@ -16,37 +16,24 @@ $lastName = $_POST['lastName'];
 $studentNumber = $_POST['studentNum'];
 $pwd = $_POST['pwd'];
 
-function checkRegistration($firstName, $lastName, $studentNumber, $pwd)
-{
-
-    if (empty($firstName) || empty($lastName) || empty($studentNumber) || empty($pwd)) {
-        echo "ERROR: Not all fields completed";
-        return false;
-    } else {
-        echo "Success: All fields completed";
-        return true;
-    }
-}
-
 
 
 function compareCredentials($connection, $firstName, $lastName, $studentNumber, $pwd)
 {
     $conn = $connection;
-    $query = "SELECT * FROM `users`;";
+    $query = "SELECT * FROM `users` WHERE studentID = $studentNumber";
     $result = mysqli_query($conn, $query);
     $credentials = mysqli_fetch_array($result);
 
-    if ($credentials['studentID'] === $studentNumber && $credentials['firstName'] === $firstName && $credentials['lastName'] === $lastName && $credentials['pwd'] === $pwd) {
-        echo "HOORAH!";
+    if ($credentials['studentID'] === $studentNumber && $credentials['firstName'] === $firstName && $credentials['lastName'] === $lastName && password_verify($pwd,$credentials['pwd'])) {
         return true;
     } else {
-        echo "ah damn";
+        echo "Failed";
         return false;
     }
 }
 
-if (checkRegistration($firstName, $lastName, $studentNumber, $pwd) && compareCredentials($connection, $firstName, $lastName, $studentNumber, $pwd) !== false) {
+if (compareCredentials($connection, $firstName, $lastName, $studentNumber, $pwd) !== false) {
     $_SESSION["loginstatus"] = true;
     header("location: ../index.php");
 }

@@ -3,7 +3,8 @@ session_start();
 ?>
 <?php
 $_SESSION["loginstatus"];
-if ($_SESSION["loginstatus"] != true){
+
+if (!isset($_SESSION["loginstatus"])){
     $_SESSION["loginstatus"] = false;
 }
 ?>
@@ -21,12 +22,25 @@ if ($_SESSION["loginstatus"] != true){
 <header>
     <nav>
         <ul>
+            <?php
+            if ($_SESSION["loginstatus"]!== true){
+                echo '<li>';
+                echo '<a href="/login.php">Login</a>';
+                echo '</li>';
+            } ?>
+            
             <li>
-                <a href="/login.php">Login</a>
+                <a href="/register.php">Register</a>
             </li>
             <li>
                 <a href="http://192.168.64.2/phpmyadmin">PHPMyAdmin</a>
             </li>
+            <?php
+            if ($_SESSION["loginstatus"]== true){
+                echo '<li>';
+                echo '<a href="functions/logout.php">Logout</a>';
+                echo '</li>';
+            } ?>
         </ul>
     </nav>
 </header>
@@ -36,8 +50,9 @@ if ($_SESSION["loginstatus"] != true){
 <?php
 if ($_SESSION['loginstatus'] == true){
     echo "You are now logged in";
+    include("moduleChecker.php");
 } else {
-    echo "please log in to continue";
+    echo "Please log in to continue";
 }
 ?>
     </section>
