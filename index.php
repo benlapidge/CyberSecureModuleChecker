@@ -1,13 +1,6 @@
 <?php
 session_start();
 ?>
-<?php
-$_SESSION["loginstatus"];
-
-if (!isset($_SESSION["loginstatus"])){
-    $_SESSION["loginstatus"] = false;
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +28,13 @@ if ($_SESSION['loginstatus'] == true){
 ?>
     </section>
 </main>
-    
+    <footer>
+        <?php
+        echo "<br>";
+echo "<h2>[DIAGNOSTICS]</h2>";
+print_r($_SESSION);
+        ?>
+    </footer>
 
 </body>
 </html>
