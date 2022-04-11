@@ -35,6 +35,8 @@ function compareCredentials($connection, $firstName, $lastName, $studentNumber, 
 
 if (compareCredentials($connection, $firstName, $lastName, $studentNumber, $pwd) !== false) {
     $_SESSION["loginstatus"] = true;
+    $_SESSION["UID"] = $studentNumber;
+    $_SESSION["name"] = $firstName;
     header("location: ../index.php");
 }
 mysqli_close($connection);

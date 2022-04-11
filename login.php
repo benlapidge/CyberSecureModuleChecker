@@ -12,6 +12,7 @@ include("functions/db_login.php");
     <title>Results Predictor Login</title>
     <link href="/css/style.css" rel="stylesheet">
     
+    
 </head>
 <?php 
 include("header.php");

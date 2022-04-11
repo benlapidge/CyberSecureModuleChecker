@@ -27,7 +27,7 @@ include("header.php");
         <h1>Module Checker</h1>
 <?php
 if ($_SESSION['loginstatus'] == true){
-    echo "You are now logged in";
+    echo "Welcome, ".$_SESSION['name']."!";
     include("moduleChecker.php");
 } else {
     echo "Please log in to continue";
