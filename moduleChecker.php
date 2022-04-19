@@ -1,5 +1,23 @@
-
 <?php
+include("functions/db_login.php");
+$connection = mysqli_connect($db_host, $db_username, $db_password, $db_database);
+
+if (
+    mysqli_connect_errno()
+) {
+    echo "CONNECTION FAILED" . mysqli_connect_errno();
+}
+
+
+//checks if logged in user already has their grades in the database
+$statement = $connection->prepare("SELECT * FROM grades WHERE studentID=?");
+$statement->bind_param("i",$UID);
+$UID = $_SESSION['UID'];
+$statement->execute();
+$result = $statement->get_result();
+$data = $result->fetch_assoc();
+if (is_null($data)){
+// if data is not available then user prompted to enter data
 echo '<h2>Grade Checker</h2>';
 echo '<h3>Please enter your grades here</h3>';
 echo '<script src="js/validateForm.js"></script>';
@@ -57,5 +75,7 @@ echo '<table>';
     echo '</tbody>';
 echo '</table>';
 echo '<input type="submit" form="gradeChecker" name="submit" value="Submit"><br/>';
-
+} else {
+    include("gradeTable.php");
+}
 ?>
