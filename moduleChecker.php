@@ -1,32 +1,10 @@
 
 <?php
-/*
-
-echo 'COMP 7001: Object Oriented Programming <input type="text" name = "comp7001-credits" placeholder="1-100"><br>';
-
-echo 'COMP 7002: Modern Computer Systems <input type="text" name = "comp7002-credits" placeholder="1-100"><br>';
-
-echo 'TECH 7005: Research, Scholarship and Professional Skills <input type="text" name = "tech7005-credits" placeholder="1-100"><br>';
-
-echo 'DALT 7002: Data Science Foundations <input type="text" name = "dalt7002-credits" placeholder="1-100"><br>';
-
-echo 'DALT 7011: Introduction to Machine Learning <input type="text" name = "dalt7011-credits" placeholder="1-100"><br>';
-
-echo 'SOFT 7003: Advanced Software Development <input type="text" name = "soft2011-credits" placeholder="1-100"><br>';
-
-echo 'TECH 7004: Cyber Security and the Web <input type="text" name = "tech7004-credits" placeholder="1-100"><br>';
-
-echo 'TECH 7009: MSc Dissertation in Computing Subjects <input type="text" name = "tech7009-credits" placeholder="1-100"><br>';
-
-*/
-
 echo '<h2>Grade Checker</h2>';
 echo '<h3>Please enter your grades here</h3>';
 echo '<script src="js/validateForm.js"></script>';
 
-echo '<form name="gradeChecker" action="functions/gradeCheck.php" onsubmit="return validateGradeForm()" method="POST">';
-
-
+echo '<form id="gradeChecker" action="functions/gradeCheck.php" onsubmit="return validateGradeForm()" method="POST">';
 echo '<table>';
     echo '<thead>';
         echo '<tr>';

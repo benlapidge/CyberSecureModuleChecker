@@ -7,8 +7,6 @@ if (
     mysqli_connect_errno()
 ) {
     echo "CONNECTION FAILED" . mysqli_connect_errno();
-} else {
-    echo "CONNECTION ESTABLISHED";
 }
 
 $statement = $connection->prepare("INSERT INTO users (studentID,firstName,lastName,pwd) VALUES (?,?,?,?)");
@@ -23,4 +21,3 @@ $statement->execute();
 
 header("location: ../index.php");
 mysqli_close($connection);
-//TODO update to include registreation features and hashing.

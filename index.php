@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['loginstatus'])){
+    $_SESSION['loginstatus'] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +29,8 @@ if ($_SESSION['loginstatus'] == true){
     echo "Please log in to continue";
 }
 ?>
+<br>
+
     </section>
 </main>
     <footer>
