@@ -20,26 +20,23 @@ include("header.php");
 <body>
 <main>
     <section>
-        <h1>Module Checker</h1>
+        
 <?php
 if ($_SESSION['loginstatus'] == true){
-    echo "Welcome, ".$_SESSION['name']."!";
+    echo "<p>Welcome, ".$_SESSION['name']."!</p>";
     include("moduleChecker.php");
 } else {
-    echo "Please log in to continue";
+    echo "<h1>Module Checker</h1>";
+    echo "<p>Please log in to continue</p>";
 }
 ?>
 <br>
 
     </section>
 </main>
-    <footer>
-        <?php
-        echo "<br>";
-echo "<h2>[DIAGNOSTICS]</h2>";
-print_r($_SESSION);
-        ?>
-    </footer>
+<?php 
+include("footer.php");
+?>
 
 </body>
 </html>

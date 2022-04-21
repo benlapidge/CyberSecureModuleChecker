@@ -113,46 +113,45 @@ echo '<table>';
     echo '</tbody>';
 echo '</table>';
 
-echo "You recieved:";
+echo "<h3>You recieved:</h3>";
 echo "<br>";
-echo $data['numAMark']." A-grades.";
+echo "<p>".$data['numAMark']." A-grades.</p>";
 echo "<br>";
-echo $data['numBMark']." B-grades.";
+echo "<p>".$data['numBMark']." B-grades.</p>";
 echo "<br>";
-echo $data['numCMark']." C-grades.";
+echo "<p>".$data['numCMark']." C-grades.</p>";
 echo "<br>";
-echo $data['numFMark']." Failed Modules.";
+echo "<p>".$data['numFMark']." Failed Modules.</p>";
 echo "<br>";
-echo "Your average mark was: ".$data['averageGrade'];
+echo "<p>"."Your average mark was: ".$data['averageGrade']."</p>";
 echo "<br>";
-echo "Your total credits was: ".$data['totalCredits'];
+echo "<p>"."Your total credits was: ".$data['totalCredits']."</p>";
 echo "<br>";
 if ($data['totalCredits'] >= 180){
-    echo "You have recieved a: MSc in Computing Science";
+    echo "<p>"."You have recieved an MSc in Computing Science"."</p>";
     echo "<br>";
 } else if ($data['totalCredits'] >= 120) {
-    echo "You have recieved a: PG Diploma in Computing Science";
+    echo "<p>"."You have recieved a: PG Diploma in Computing Science"."</p>";
     echo "<br>";
 } else {
-    echo "You have not been awarded any qualification";
+    echo "<p>"."You have not been awarded any qualification"."</p>";
     echo "<br>";
 }
 
 if ($data['averageGrade']>=70 && $data['tech7009Grades']>=68){
-    echo "You have been awarded with a Distinction";
+    echo "<p>"."You have been awarded with a Distinction"."</p>";
     echo "<br>";
 } else if ($data['averageGrade']>=70 && $data['tech7009Grades']<=58){
-    echo "You have been awarded with a Merit";
+    echo "<p>"."You have been awarded with a Merit"."</p>";
     echo "<br>";
 } else if ($data['averageGrade']>=60 && $data['tech7009Grades']>=58){
-    echo "You have been awarded with a Merit";
+    echo "<p>"."You have been awarded with a Merit"."</p>";
     echo "<br>"; 
 } else if ($data['averageGrade']<60){
-    echo "You have been awarded with a Pass";
+    echo "<p>"."You have been awarded with a Pass"."</p>";
     echo "<br>";
 }
 
 
 echo '<h3><a href="functions/reset.php">Reset</a></h3>';
-
-
+?>

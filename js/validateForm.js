@@ -29,7 +29,7 @@ function validateRegisterForm() {
     let pwd = document.forms["registerForm"]["pwd"].value;
     let pwdR = document.forms["registerForm"]["pwdRepeat"].value;
 
-    if (studentNum == "" || studentNum.toString().length >8 || studentNum.toString().length <8) {
+    if (studentNum == "" || studentNum.toString().length >8 || studentNum.toString().length <8 || isNaN(studentNum)) {
         alert("Please enter valid student number");
         return false;
     } else if (fName == "") {
@@ -74,14 +74,14 @@ function validateGradeForm() {
     let tech7009Credits = document.forms["gradeChecker"]['tech7009-credits'].value;
     let tech7009Grades = document.forms["gradeChecker"]['tech7009-grades'].value;
 
-    if (comp7001Credits == "" || comp7001Credits.toString().length > 2 ||
-        comp7002Credits == "" || comp7002Credits.toString().length > 2 || tech7005Credits == "" || tech7005Credits.toString().length > 2 || dalt7002Credits == "" || dalt7002Credits.toString().length > 2 || dalt7011Credits == "" || dalt7011Credits.toString().length > 2 || soft7003Credits == "" || soft7003Credits.toString().length > 2 || tech7004Credits == "" || tech7004Credits.toString().length > 2 || tech7009Credits == "" || tech7009Credits.toString().length > 2) {
+    if (comp7001Credits == "" || isNaN(comp7001Credits) || comp7001Credits.toString().length > 2 ||
+        comp7002Credits == "" || isNaN(comp7002Credits)|| comp7002Credits.toString().length > 2 || tech7005Credits == "" || isNaN(tech7005Credits)|| tech7005Credits.toString().length > 2 || dalt7002Credits == "" || isNaN(dalt7002Credits)|| dalt7002Credits.toString().length > 2 || dalt7011Credits == "" || isNaN(dalt7011Credits)|| dalt7011Credits.toString().length > 2 || soft7003Credits == "" || isNaN(soft7003Credits)|| soft7003Credits.toString().length > 2 || tech7004Credits == "" || isNaN(tech7004Credits)|| tech7004Credits.toString().length > 2 || tech7009Credits == "" || isNaN(tech7009Credits) || tech7009Credits.toString().length > 2) {
         alert("Please enter all valid credit values into the form");
         return false;
     } 
 
-    if (comp7001Grades == "" || comp7001Grades.toString().length > 3 ||
-        comp7002Grades == "" || comp7002Grades.toString().length > 3 || tech7005Grades == "" || tech7005Grades.toString().length > 3 || dalt7002Grades == "" || dalt7002Grades.toString().length > 3 || dalt7011Grades == "" || dalt7011Grades.toString().length > 3 || soft7003Grades == "" || soft7003Grades.toString().length > 3 || tech7004Grades == "" || tech7004Grades.toString().length > 3 || tech7009Grades == "" || tech7009Grades.toString().length > 3) {
+    if (comp7001Grades == "" || isNaN(comp7001Grades) || comp7001Grades.toString().length > 3 ||
+        comp7002Grades == "" || isNaN(comp7002Grades)|| comp7002Grades.toString().length > 3 || tech7005Grades == "" || isNaN(tech7005Grades)|| tech7005Grades.toString().length > 3 || dalt7002Grades == "" || isNaN(dalt7002Grades)|| dalt7002Grades.toString().length > 3 || dalt7011Grades == "" || isNaN(dalt7011Grades)|| dalt7011Grades.toString().length > 3 || soft7003Grades == "" || isNaN(soft7003Grades)|| soft7003Grades.toString().length > 3 || tech7004Grades == "" || isNaN(tech7004Grades)|| tech7004Grades.toString().length > 3 || tech7009Grades == "" || isNaN(tech7009Grades) || tech7009Grades.toString().length > 3) {
         alert("Please enter all valid grade values into the form");
         return false;
     } 

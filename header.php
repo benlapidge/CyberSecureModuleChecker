@@ -2,6 +2,9 @@
 <header>
     <nav>
         <ul>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
             <?php
             if ($_SESSION["loginstatus"]!== true){
                 echo '<li>';
@@ -12,7 +15,7 @@
             <?php
             if ($_SESSION["loginstatus"]!== true){
                 echo '<li>';
-                echo '<a href="/register.php">register</a>';
+                echo '<a href="/register.php">Register</a>';
                 echo '</li>';
             } ?>
             <?php

@@ -12,14 +12,14 @@ include("functions/db_login.php");
     <title>Results Predictor Login</title>
     <link href="/css/style.css" rel="stylesheet">
     
-    
 </head>
 <?php 
 include("header.php");
 ?>
 <body>
     <h2>Login</h2>
-    <form name="loginForm" action="functions/loginScript.php" onsubmit="return validateLoginForm()" method="POST">
+    <script src="js/validateForm.js"></script>
+    <form class="login" name="loginForm" action="functions/loginScript.php" onsubmit="return validateLoginForm()" method="POST">
         Student Number: <input type="text" name = "studentNum" placeholder="16052796"><br>
         First Name: <input type="text" name = "firstName" placeholder="John"><br>
         Last Name: <input type="text" name = "lastName" placeholder="Smith"><br>
@@ -27,5 +27,8 @@ include("header.php");
         <input type="submit" name="submit" value="Submit"><br/>
         
     </form>
+    <?php 
+include("footer.php");
+?>
 </body>
 </html>
