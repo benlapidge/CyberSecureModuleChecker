@@ -6,6 +6,9 @@
 }
 body {
   background-color: #cafafe;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -47,6 +50,7 @@ nav a:hover {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bolder;
+  color: black;
   background-color: whitesmoke;
 }
 section {
@@ -96,4 +100,16 @@ form {
     font-family: 'Roboto Slab', serif;
     background-color: whitesmoke;
     border: 5px solid #fc4445;
+  }
+
+  footer {
+    height: 100%;
+    border: 1px solid black;
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #fc4445;
+  }
+  footer p{
+    color: whitesmoke;
   }
