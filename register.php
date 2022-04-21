@@ -16,13 +16,13 @@ include("functions/db_login.php");
 include("header.php");
 ?>
 <body>
-    <h2>Login</h2>
+    <h2>Register</h2>
     <script src="js/validateForm.js"></script>
     <form name="registerForm" action="functions/registerScript.php" onsubmit="return validateRegisterForm()" method="POST">
-        Student Number: <input type="text" name = "studentNum" placeholder="16052796"><br>
-        First Name: <input type="text" name = "firstName" placeholder="John"><br>
-        Last Name: <input type="text" name = "lastName" placeholder="Smith"><br>
-        Password: <input type="password" name = "pwd" placeholder="Not 'password'"><br>
+        Student Number: <input type="text" name = "studentNum" placeholder="Enter your 8-digit student number"><br>
+        First Name: <input type="text" name = "firstName" placeholder="Enter your first name here"><br>
+        Last Name: <input type="text" name = "lastName" placeholder="Enter your last name here"><br>
+        Password: <input type="password" name = "pwd" placeholder="Must be a minimum of 12 characters"><br>
         Password: <input type="password" name = "pwdRepeat" placeholder="Confirm Password'"><br>
         <input type="submit" name="submit" value="Submit"><br/>
     </form>
