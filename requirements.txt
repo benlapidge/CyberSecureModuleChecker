@@ -1,14 +1,14 @@
 Assignment Requirements:
     1. registrations system
-        a. this takes a form, validates entry with javascript, then parses to database. 
+        a. this takes a form, validates entry with javascript, then parses to database.  Complete.
     2. Login system
-        a. This takes a form, validates entry with javascript, then compares against database. if confirmed, session is updated with user loginstate and unique ID
+        a. This takes a form, validates entry with javascript, then compares against database. if confirmed, session is updated with user loginstate and unique ID. Complete.
     3. Module checker
-        a. this is inaccessible if user is not logged in. Once logged in, a table / form hybrid appears (PHP) enabling the user to enter their marks in
-        b. once marks are entered, the form is validated with javascript. 
-        c. once validated, marks are sent to database. table is redrawn with caluclations applied.
-        d. additional text is generated based on values entered in.
+        a. this is inaccessible if user is not logged in. Once logged in, a table / form hybrid appears (PHP) enabling the user to enter their marks in. Complete.
+        b. once marks are entered, the form is validated with javascript. Complete
+        c. once validated, marks are sent to database. table is redrawn with caluclations applied. Complete
+        d. additional text is generated based on values entered in. Complete
     4. Logout
-        a. this clears the session id and resetst the system.
+        a. this clears the session id and resetst the system. Complete
     5. login
-        a. once re-logged in, the marks from earlier are retrieved. 
+        a. once re-logged in, the marks from earlier are retrieved. Complete
