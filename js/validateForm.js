@@ -74,8 +74,8 @@ function validateGradeForm() {
     let tech7009Credits = document.forms["gradeChecker"]['tech7009-credits'].value;
     let tech7009Grades = document.forms["gradeChecker"]['tech7009-grades'].value;
 
-    if (comp7001Credits == "" || isNaN(comp7001Credits) || comp7001Credits.toString().length > 2 ||
-        comp7002Credits == "" || isNaN(comp7002Credits)|| comp7002Credits.toString().length > 2 || tech7005Credits == "" || isNaN(tech7005Credits)|| tech7005Credits.toString().length > 2 || dalt7002Credits == "" || isNaN(dalt7002Credits)|| dalt7002Credits.toString().length > 2 || dalt7011Credits == "" || isNaN(dalt7011Credits)|| dalt7011Credits.toString().length > 2 || soft7003Credits == "" || isNaN(soft7003Credits)|| soft7003Credits.toString().length > 2 || tech7004Credits == "" || isNaN(tech7004Credits)|| tech7004Credits.toString().length > 2 || tech7009Credits == "" || isNaN(tech7009Credits) || tech7009Credits.toString().length > 2) {
+    if (comp7001Credits == "" || isNaN(comp7001Credits) || comp7001Credits > 60 ||
+        comp7002Credits == "" || isNaN(comp7002Credits)|| comp7002Credits > 60 || tech7005Credits == "" || isNaN(tech7005Credits)|| tech7005Credits > 60 || dalt7002Credits == "" || isNaN(dalt7002Credits)|| dalt7002Credits > 60 || dalt7011Credits == "" || isNaN(dalt7011Credits)|| dalt7011Credits > 60 || soft7003Credits == "" || isNaN(soft7003Credits)|| soft7003Credits > 60 || tech7004Credits == "" || isNaN(tech7004Credits)|| tech7004Credits > 60 || tech7009Credits == "" || isNaN(tech7009Credits) || tech7009Credits > 60) {
         alert("Please enter all valid credit values into the form");
         return false;
     } 
