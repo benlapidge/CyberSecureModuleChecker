@@ -80,8 +80,8 @@ function validateGradeForm() {
         return false;
     } 
 
-    if (comp7001Grades == "" || isNaN(comp7001Grades) || comp7001Grades.toString().length > 3 ||
-        comp7002Grades == "" || isNaN(comp7002Grades)|| comp7002Grades.toString().length > 3 || tech7005Grades == "" || isNaN(tech7005Grades)|| tech7005Grades.toString().length > 3 || dalt7002Grades == "" || isNaN(dalt7002Grades)|| dalt7002Grades.toString().length > 3 || dalt7011Grades == "" || isNaN(dalt7011Grades)|| dalt7011Grades.toString().length > 3 || soft7003Grades == "" || isNaN(soft7003Grades)|| soft7003Grades.toString().length > 3 || tech7004Grades == "" || isNaN(tech7004Grades)|| tech7004Grades.toString().length > 3 || tech7009Grades == "" || isNaN(tech7009Grades) || tech7009Grades.toString().length > 3) {
+    if (comp7001Grades == "" || isNaN(comp7001Grades) || comp7001Grades > 100 ||
+        comp7002Grades == "" || isNaN(comp7002Grades)|| comp7002Grades > 100 || tech7005Grades == "" || isNaN(tech7005Grades)|| tech7005Grades > 100 || dalt7002Grades == "" || isNaN(dalt7002Grades)|| dalt7002Grades > 100 || dalt7011Grades == "" || isNaN(dalt7011Grades)|| dalt7011Grades > 100 || soft7003Grades == "" || isNaN(soft7003Grades)|| soft7003Grades > 100 || tech7004Grades == "" || isNaN(tech7004Grades)|| tech7004Grades > 100 || tech7009Grades == "" || isNaN(tech7009Grades) || tech7009Grades > 100) {
         alert("Please enter all valid grade values into the form");
         return false;
     } 
